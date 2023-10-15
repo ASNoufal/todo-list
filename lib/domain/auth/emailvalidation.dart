@@ -1,9 +1,11 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:dartz/dartz.dart';
-import 'package:e_comerce_app/domain/core/MainFailures.dart';
+import 'package:e_comerce_app/domain/core/Failures/MainFailures.dart';
+import 'package:e_comerce_app/domain/core/Validation/validation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-class Emailvalidation {
+class Emailvalidation extends Validation{
+  @override
   final Either<MainFailures, String> value;
 
   factory Emailvalidation(String input) {
@@ -12,15 +14,8 @@ class Emailvalidation {
 
   Emailvalidation._({required this.value});
 
-  @override
-  bool operator ==(covariant Emailvalidation other) {
-    if (identical(this, other)) return true;
 
-    return other.value == value;
-  }
-
-  @override
-  int get hashCode => value.hashCode;
+ 
 }
 
 Either<MainFailures, String> validateEmailaddress(String input) {
@@ -29,10 +24,10 @@ Either<MainFailures, String> validateEmailaddress(String input) {
   if (RegExp(emailRegx).hasMatch(input)) {
     return right(input);
   } else {
-    return left(MainFailures.client(failuredata: input));
+    return left(MainFailures.wrongemailId(failuredata: input));
   }
 }
 
-void somevaluechanged(Emailvalidation emailvalidation) {
+void emailvalue(Emailvalidation emailvalidation) {
   final data = emailvalidation.value.fold((l) => l.failuredata, (r) => r);
 }

@@ -19,39 +19,39 @@ mixin _$MainFailures {
   String get failuredata => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String failuredata) serverside,
-    required TResult Function(String failuredata) client,
+    required TResult Function(String failuredata) wrongemailId,
+    required TResult Function(String failuredata) wrongpassword,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String failuredata)? serverside,
-    TResult? Function(String failuredata)? client,
+    TResult? Function(String failuredata)? wrongemailId,
+    TResult? Function(String failuredata)? wrongpassword,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String failuredata)? serverside,
-    TResult Function(String failuredata)? client,
+    TResult Function(String failuredata)? wrongemailId,
+    TResult Function(String failuredata)? wrongpassword,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Serverside value) serverside,
-    required TResult Function(_Client value) client,
+    required TResult Function(WrongemailId value) wrongemailId,
+    required TResult Function(Wrongpassword value) wrongpassword,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Serverside value)? serverside,
-    TResult? Function(_Client value)? client,
+    TResult? Function(WrongemailId value)? wrongemailId,
+    TResult? Function(Wrongpassword value)? wrongpassword,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Serverside value)? serverside,
-    TResult Function(_Client value)? client,
+    TResult Function(WrongemailId value)? wrongemailId,
+    TResult Function(Wrongpassword value)? wrongpassword,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -95,22 +95,22 @@ class _$MainFailuresCopyWithImpl<$Res, $Val extends MainFailures>
 }
 
 /// @nodoc
-abstract class _$$ServersideImplCopyWith<$Res>
+abstract class _$$WrongemailIdImplCopyWith<$Res>
     implements $MainFailuresCopyWith<$Res> {
-  factory _$$ServersideImplCopyWith(
-          _$ServersideImpl value, $Res Function(_$ServersideImpl) then) =
-      __$$ServersideImplCopyWithImpl<$Res>;
+  factory _$$WrongemailIdImplCopyWith(
+          _$WrongemailIdImpl value, $Res Function(_$WrongemailIdImpl) then) =
+      __$$WrongemailIdImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String failuredata});
 }
 
 /// @nodoc
-class __$$ServersideImplCopyWithImpl<$Res>
-    extends _$MainFailuresCopyWithImpl<$Res, _$ServersideImpl>
-    implements _$$ServersideImplCopyWith<$Res> {
-  __$$ServersideImplCopyWithImpl(
-      _$ServersideImpl _value, $Res Function(_$ServersideImpl) _then)
+class __$$WrongemailIdImplCopyWithImpl<$Res>
+    extends _$MainFailuresCopyWithImpl<$Res, _$WrongemailIdImpl>
+    implements _$$WrongemailIdImplCopyWith<$Res> {
+  __$$WrongemailIdImplCopyWithImpl(
+      _$WrongemailIdImpl _value, $Res Function(_$WrongemailIdImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -118,7 +118,7 @@ class __$$ServersideImplCopyWithImpl<$Res>
   $Res call({
     Object? failuredata = null,
   }) {
-    return _then(_$ServersideImpl(
+    return _then(_$WrongemailIdImpl(
       failuredata: null == failuredata
           ? _value.failuredata
           : failuredata // ignore: cast_nullable_to_non_nullable
@@ -129,22 +129,22 @@ class __$$ServersideImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ServersideImpl implements Serverside {
-  const _$ServersideImpl({required this.failuredata});
+class _$WrongemailIdImpl implements WrongemailId {
+  const _$WrongemailIdImpl({required this.failuredata});
 
   @override
   final String failuredata;
 
   @override
   String toString() {
-    return 'MainFailures.serverside(failuredata: $failuredata)';
+    return 'MainFailures.wrongemailId(failuredata: $failuredata)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ServersideImpl &&
+            other is _$WrongemailIdImpl &&
             (identical(other.failuredata, failuredata) ||
                 other.failuredata == failuredata));
   }
@@ -155,36 +155,36 @@ class _$ServersideImpl implements Serverside {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ServersideImplCopyWith<_$ServersideImpl> get copyWith =>
-      __$$ServersideImplCopyWithImpl<_$ServersideImpl>(this, _$identity);
+  _$$WrongemailIdImplCopyWith<_$WrongemailIdImpl> get copyWith =>
+      __$$WrongemailIdImplCopyWithImpl<_$WrongemailIdImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String failuredata) serverside,
-    required TResult Function(String failuredata) client,
+    required TResult Function(String failuredata) wrongemailId,
+    required TResult Function(String failuredata) wrongpassword,
   }) {
-    return serverside(failuredata);
+    return wrongemailId(failuredata);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String failuredata)? serverside,
-    TResult? Function(String failuredata)? client,
+    TResult? Function(String failuredata)? wrongemailId,
+    TResult? Function(String failuredata)? wrongpassword,
   }) {
-    return serverside?.call(failuredata);
+    return wrongemailId?.call(failuredata);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String failuredata)? serverside,
-    TResult Function(String failuredata)? client,
+    TResult Function(String failuredata)? wrongemailId,
+    TResult Function(String failuredata)? wrongpassword,
     required TResult orElse(),
   }) {
-    if (serverside != null) {
-      return serverside(failuredata);
+    if (wrongemailId != null) {
+      return wrongemailId(failuredata);
     }
     return orElse();
   }
@@ -192,64 +192,64 @@ class _$ServersideImpl implements Serverside {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Serverside value) serverside,
-    required TResult Function(_Client value) client,
+    required TResult Function(WrongemailId value) wrongemailId,
+    required TResult Function(Wrongpassword value) wrongpassword,
   }) {
-    return serverside(this);
+    return wrongemailId(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Serverside value)? serverside,
-    TResult? Function(_Client value)? client,
+    TResult? Function(WrongemailId value)? wrongemailId,
+    TResult? Function(Wrongpassword value)? wrongpassword,
   }) {
-    return serverside?.call(this);
+    return wrongemailId?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Serverside value)? serverside,
-    TResult Function(_Client value)? client,
+    TResult Function(WrongemailId value)? wrongemailId,
+    TResult Function(Wrongpassword value)? wrongpassword,
     required TResult orElse(),
   }) {
-    if (serverside != null) {
-      return serverside(this);
+    if (wrongemailId != null) {
+      return wrongemailId(this);
     }
     return orElse();
   }
 }
 
-abstract class Serverside implements MainFailures {
-  const factory Serverside({required final String failuredata}) =
-      _$ServersideImpl;
+abstract class WrongemailId implements MainFailures {
+  const factory WrongemailId({required final String failuredata}) =
+      _$WrongemailIdImpl;
 
   @override
   String get failuredata;
   @override
   @JsonKey(ignore: true)
-  _$$ServersideImplCopyWith<_$ServersideImpl> get copyWith =>
+  _$$WrongemailIdImplCopyWith<_$WrongemailIdImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ClientImplCopyWith<$Res>
+abstract class _$$WrongpasswordImplCopyWith<$Res>
     implements $MainFailuresCopyWith<$Res> {
-  factory _$$ClientImplCopyWith(
-          _$ClientImpl value, $Res Function(_$ClientImpl) then) =
-      __$$ClientImplCopyWithImpl<$Res>;
+  factory _$$WrongpasswordImplCopyWith(
+          _$WrongpasswordImpl value, $Res Function(_$WrongpasswordImpl) then) =
+      __$$WrongpasswordImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String failuredata});
 }
 
 /// @nodoc
-class __$$ClientImplCopyWithImpl<$Res>
-    extends _$MainFailuresCopyWithImpl<$Res, _$ClientImpl>
-    implements _$$ClientImplCopyWith<$Res> {
-  __$$ClientImplCopyWithImpl(
-      _$ClientImpl _value, $Res Function(_$ClientImpl) _then)
+class __$$WrongpasswordImplCopyWithImpl<$Res>
+    extends _$MainFailuresCopyWithImpl<$Res, _$WrongpasswordImpl>
+    implements _$$WrongpasswordImplCopyWith<$Res> {
+  __$$WrongpasswordImplCopyWithImpl(
+      _$WrongpasswordImpl _value, $Res Function(_$WrongpasswordImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -257,7 +257,7 @@ class __$$ClientImplCopyWithImpl<$Res>
   $Res call({
     Object? failuredata = null,
   }) {
-    return _then(_$ClientImpl(
+    return _then(_$WrongpasswordImpl(
       failuredata: null == failuredata
           ? _value.failuredata
           : failuredata // ignore: cast_nullable_to_non_nullable
@@ -268,22 +268,22 @@ class __$$ClientImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ClientImpl implements _Client {
-  const _$ClientImpl({required this.failuredata});
+class _$WrongpasswordImpl implements Wrongpassword {
+  const _$WrongpasswordImpl({required this.failuredata});
 
   @override
   final String failuredata;
 
   @override
   String toString() {
-    return 'MainFailures.client(failuredata: $failuredata)';
+    return 'MainFailures.wrongpassword(failuredata: $failuredata)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ClientImpl &&
+            other is _$WrongpasswordImpl &&
             (identical(other.failuredata, failuredata) ||
                 other.failuredata == failuredata));
   }
@@ -294,36 +294,36 @@ class _$ClientImpl implements _Client {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ClientImplCopyWith<_$ClientImpl> get copyWith =>
-      __$$ClientImplCopyWithImpl<_$ClientImpl>(this, _$identity);
+  _$$WrongpasswordImplCopyWith<_$WrongpasswordImpl> get copyWith =>
+      __$$WrongpasswordImplCopyWithImpl<_$WrongpasswordImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String failuredata) serverside,
-    required TResult Function(String failuredata) client,
+    required TResult Function(String failuredata) wrongemailId,
+    required TResult Function(String failuredata) wrongpassword,
   }) {
-    return client(failuredata);
+    return wrongpassword(failuredata);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String failuredata)? serverside,
-    TResult? Function(String failuredata)? client,
+    TResult? Function(String failuredata)? wrongemailId,
+    TResult? Function(String failuredata)? wrongpassword,
   }) {
-    return client?.call(failuredata);
+    return wrongpassword?.call(failuredata);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String failuredata)? serverside,
-    TResult Function(String failuredata)? client,
+    TResult Function(String failuredata)? wrongemailId,
+    TResult Function(String failuredata)? wrongpassword,
     required TResult orElse(),
   }) {
-    if (client != null) {
-      return client(failuredata);
+    if (wrongpassword != null) {
+      return wrongpassword(failuredata);
     }
     return orElse();
   }
@@ -331,42 +331,43 @@ class _$ClientImpl implements _Client {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Serverside value) serverside,
-    required TResult Function(_Client value) client,
+    required TResult Function(WrongemailId value) wrongemailId,
+    required TResult Function(Wrongpassword value) wrongpassword,
   }) {
-    return client(this);
+    return wrongpassword(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Serverside value)? serverside,
-    TResult? Function(_Client value)? client,
+    TResult? Function(WrongemailId value)? wrongemailId,
+    TResult? Function(Wrongpassword value)? wrongpassword,
   }) {
-    return client?.call(this);
+    return wrongpassword?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Serverside value)? serverside,
-    TResult Function(_Client value)? client,
+    TResult Function(WrongemailId value)? wrongemailId,
+    TResult Function(Wrongpassword value)? wrongpassword,
     required TResult orElse(),
   }) {
-    if (client != null) {
-      return client(this);
+    if (wrongpassword != null) {
+      return wrongpassword(this);
     }
     return orElse();
   }
 }
 
-abstract class _Client implements MainFailures {
-  const factory _Client({required final String failuredata}) = _$ClientImpl;
+abstract class Wrongpassword implements MainFailures {
+  const factory Wrongpassword({required final String failuredata}) =
+      _$WrongpasswordImpl;
 
   @override
   String get failuredata;
   @override
   @JsonKey(ignore: true)
-  _$$ClientImplCopyWith<_$ClientImpl> get copyWith =>
+  _$$WrongpasswordImplCopyWith<_$WrongpasswordImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
