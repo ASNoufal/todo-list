@@ -4,7 +4,7 @@ part of 'auth_bloc.dart';
 class AuthState with _$AuthState {
   const factory AuthState(
       {required Emailvalidation emailvalidation,
-      required Password password,
+      required Passwordvalidation password,
       required bool isloading,
       required Option<Either<Emailandpasswordfailure, Unit>>
           authfailureorsucessoption,
@@ -13,7 +13,7 @@ class AuthState with _$AuthState {
   factory AuthState.initial() {
     return AuthState(
         emailvalidation: Emailvalidation(''),
-        password: Password(''),
+        password: Passwordvalidation(''),
         isloading: false,
         authfailureorsucessoption: none(),
         isError: false);

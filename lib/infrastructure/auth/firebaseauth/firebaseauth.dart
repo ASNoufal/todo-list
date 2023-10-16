@@ -7,7 +7,9 @@ import 'package:e_comerce_app/domain/core/Failures/unexpectedvalueerror/unexpect
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:injectable/injectable.dart';
 
+@LazySingleton(as: IauthFacad)
 class AuthFirebase implements IauthFacad {
   final FirebaseAuth _firebaseAuth;
   final GoogleSignIn _googleSignIn;
@@ -20,7 +22,7 @@ class AuthFirebase implements IauthFacad {
   @override
   Future<Either<Emailandpasswordfailure, Unit>> registerwithEmailandPassword(
       {required Emailvalidation emailvalidation,
-      required Password password}) async {
+      required Passwordvalidation password}) async {
     try {
       await _firebaseAuth.createUserWithEmailAndPassword(
           email: emailvalidation.value.fold(
@@ -38,7 +40,7 @@ class AuthFirebase implements IauthFacad {
   @override
   Future<Either<Emailandpasswordfailure, Unit>> signinwithEmailandPassword(
       {required Emailvalidation emailvalidation,
-      required Password password}) async {
+      required Passwordvalidation password}) async {
     try {
       await _firebaseAuth.signInWithEmailAndPassword(
           email: emailvalidation.value.fold(

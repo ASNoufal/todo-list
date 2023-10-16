@@ -5,9 +5,10 @@ import 'package:e_comerce_app/domain/core/Failures/Failureforemailandpassword/em
 
 abstract class IauthFacad {
   Future<Either<Emailandpasswordfailure, Unit>> registerwithEmailandPassword(
-      {required Emailvalidation emailvalidation, required Password password});
+      {required Emailvalidation emailvalidation,
+      required Passwordvalidation password});
   Future<Either<Emailandpasswordfailure, Unit>> signinwithEmailandPassword(
-      {required Emailvalidation emailvalidation, required Password password});
+      {required Emailvalidation emailvalidation,
+      required Passwordvalidation password});
   Future<Either<Emailandpasswordfailure, Unit>> signwithGoogle();
 }
-  

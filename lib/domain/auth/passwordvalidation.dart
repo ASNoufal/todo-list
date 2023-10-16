@@ -1,18 +1,17 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:dartz/dartz.dart';
 
 import 'package:e_comerce_app/domain/core/Failures/MainFailures.dart';
 import 'package:e_comerce_app/domain/core/Validation/validation.dart';
 
-class Password extends Validation {
+class Passwordvalidation extends Validation {
   @override
   final Either<MainFailures, String> value;
-  const Password._({
+  const Passwordvalidation._({
     required this.value,
   });
 
-  factory Password(String value) {
-    return Password._(value: passwordcheck(value));
+  factory Passwordvalidation(String value) {
+    return Passwordvalidation._(value: passwordcheck(value));
   }
 }
 

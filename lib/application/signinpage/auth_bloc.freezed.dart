@@ -804,7 +804,7 @@ abstract class Signinwithgoogle implements AuthEvent {
 /// @nodoc
 mixin _$AuthState {
   Emailvalidation get emailvalidation => throw _privateConstructorUsedError;
-  Password get password => throw _privateConstructorUsedError;
+  Passwordvalidation get password => throw _privateConstructorUsedError;
   bool get isloading => throw _privateConstructorUsedError;
   Option<Either<Emailandpasswordfailure, Unit>> get authfailureorsucessoption =>
       throw _privateConstructorUsedError;
@@ -822,7 +822,7 @@ abstract class $AuthStateCopyWith<$Res> {
   @useResult
   $Res call(
       {Emailvalidation emailvalidation,
-      Password password,
+      Passwordvalidation password,
       bool isloading,
       Option<Either<Emailandpasswordfailure, Unit>> authfailureorsucessoption,
       bool isError});
@@ -855,7 +855,7 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
       password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
-              as Password,
+              as Passwordvalidation,
       isloading: null == isloading
           ? _value.isloading
           : isloading // ignore: cast_nullable_to_non_nullable
@@ -882,7 +882,7 @@ abstract class _$$AuthStateImplCopyWith<$Res>
   @useResult
   $Res call(
       {Emailvalidation emailvalidation,
-      Password password,
+      Passwordvalidation password,
       bool isloading,
       Option<Either<Emailandpasswordfailure, Unit>> authfailureorsucessoption,
       bool isError});
@@ -913,7 +913,7 @@ class __$$AuthStateImplCopyWithImpl<$Res>
       password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
-              as Password,
+              as Passwordvalidation,
       isloading: null == isloading
           ? _value.isloading
           : isloading // ignore: cast_nullable_to_non_nullable
@@ -943,7 +943,7 @@ class _$AuthStateImpl implements _AuthState {
   @override
   final Emailvalidation emailvalidation;
   @override
-  final Password password;
+  final Passwordvalidation password;
   @override
   final bool isloading;
   @override
@@ -987,7 +987,7 @@ class _$AuthStateImpl implements _AuthState {
 abstract class _AuthState implements AuthState {
   const factory _AuthState(
       {required final Emailvalidation emailvalidation,
-      required final Password password,
+      required final Passwordvalidation password,
       required final bool isloading,
       required final Option<Either<Emailandpasswordfailure, Unit>>
           authfailureorsucessoption,
@@ -996,7 +996,7 @@ abstract class _AuthState implements AuthState {
   @override
   Emailvalidation get emailvalidation;
   @override
-  Password get password;
+  Passwordvalidation get password;
   @override
   bool get isloading;
   @override

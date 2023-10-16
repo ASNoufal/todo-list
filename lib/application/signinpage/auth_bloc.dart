@@ -5,11 +5,13 @@ import 'package:e_comerce_app/domain/auth/passwordvalidation.dart';
 import 'package:e_comerce_app/domain/core/Failures/Failureforemailandpassword/emailandpasswordfailure.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:injectable/injectable.dart';
 
 part 'auth_event.dart';
 part 'auth_state.dart';
 part 'auth_bloc.freezed.dart';
 
+@injectable
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   IauthFacad iauthFacad;
   AuthBloc(this.iauthFacad) : super(AuthState.initial()) {
@@ -22,7 +24,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         },
         passwordchanged: (events) async {
           emit(state.copyWith(
-              password: Password(events.passwordStr),
+              password: Passwordvalidation(events.passwordStr),
               authfailureorsucessoption: none()));
         },
         signinwithemailandpassword: (events) async {

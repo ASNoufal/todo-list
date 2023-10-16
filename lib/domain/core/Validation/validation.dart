@@ -7,7 +7,7 @@ abstract class Validation {
   Either<MainFailures, String> get value;
 
   @override
-  bool operator ==(covariant Emailvalidation other) {
+  bool operator ==(covariant Validation other) {
     if (identical(this, other)) return true;
 
     return other.value == value;
