@@ -1,6 +1,8 @@
-import 'dart:ffi';
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 
 import 'package:e_comerce_app/application/signinpage/auth_bloc.dart';
+import 'package:e_comerce_app/domain/core/Failures/Failureforemailandpassword/emailandpasswordfailure.dart';
+import 'package:e_comerce_app/presentation/loginpage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -13,7 +15,12 @@ class Signinform extends StatelessWidget {
 
     return BlocConsumer<AuthBloc, AuthState>(
       listener: (context, state) {
-        // TODO: implement listener
+        state.authfailureorsucessoption.fold(
+            () => null,
+            (a) => a.fold(
+                (l) => ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text("Error while data occur"))),
+                (r) => const Loginpage()));
       },
       builder: (context, state) {
         return Form(

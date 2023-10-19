@@ -2,12 +2,15 @@ import 'package:dartz/dartz.dart';
 import 'package:e_comerce_app/domain/auth/I_authfacad/i_authfacad.dart';
 import 'package:e_comerce_app/domain/auth/emailvalidation.dart';
 import 'package:e_comerce_app/domain/auth/passwordvalidation.dart';
+import 'package:e_comerce_app/domain/auth/user.dart';
 import 'package:e_comerce_app/domain/core/Failures/Failureforemailandpassword/emailandpasswordfailure.dart';
 import 'package:e_comerce_app/domain/core/Failures/unexpectedvalueerror/unexpectedvaluerror.dart';
+import 'package:e_comerce_app/domain/core/Validation/validation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:injectable/injectable.dart';
+import 'package:firebase_auth/firebase_auth.dart' as auth;
 
 @LazySingleton(as: IauthFacad)
 class AuthFirebase implements IauthFacad {
@@ -66,9 +69,20 @@ class AuthFirebase implements IauthFacad {
 
       final authCredential = GoogleAuthProvider.credential(
           idToken: googleauth.idToken, accessToken: googleauth.accessToken);
-      return _firebaseAuth
+      return await _firebaseAuth
           .signInWithCredential(authCredential)
           .then((value) => right(unit));
     }
+  }
+
+  @override
+  Future<Future<List<void>>> signout() async {
+    return Future.wait([_googleSignIn.signOut(), _firebaseAuth.signOut()]);
+  }
+
+  @override
+  Future<Option<Userfre>> getsignin() async {
+    return some(
+        Userfre(id: Userid.getuniqueid(_firebaseAuth.currentUser!.uid)));
   }
 }

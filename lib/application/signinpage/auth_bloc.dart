@@ -16,13 +16,13 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
   IauthFacad iauthFacad;
   AuthBloc(this.iauthFacad) : super(AuthState.initial()) {
     on<AuthEvent>((event, emit) async {
-      event.map(
-        emailchanged: (events) async {
+      await event.map(
+        emailchanged: (events) {
           emit(state.copyWith(
               emailvalidation: Emailvalidation(events.emailStr),
               authfailureorsucessoption: none()));
         },
-        passwordchanged: (events) async {
+        passwordchanged: (events) {
           emit(state.copyWith(
               password: Passwordvalidation(events.passwordStr),
               authfailureorsucessoption: none()));
