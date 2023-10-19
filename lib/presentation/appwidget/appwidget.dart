@@ -1,4 +1,5 @@
 import 'package:e_comerce_app/presentation/signinpage/Signinpage.dart';
+import 'package:e_comerce_app/presentation/signinpage/splashscreen.dart';
 import 'package:flutter/material.dart';
 
 class Appwidget extends StatelessWidget {
@@ -6,6 +7,6 @@ class Appwidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Signinpage();
+    return const Splashscreen();
   }
 }
